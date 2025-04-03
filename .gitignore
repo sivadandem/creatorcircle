@@ -1,0 +1,27 @@
+# Environment
+venv/
+.env
+.env.*
+!/.env.example
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Instance folder
+instance/
+
+# Testing (if added)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS specific
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
