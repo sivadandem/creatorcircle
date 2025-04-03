@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "0e4422fd-4d66-444b-8f12-b308fd4da447",
+		"name": "postman tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43699177",
+		"_collection_link": "https://sivadandem.postman.co/workspace/siva-dandem's-Workspace~a908d6a7-74df-49a0-8be7-840b6d124c80/collection/43699177-0e4422fd-4d66-444b-8f12-b308fd4da447?action=share&source=collection_link&creator=43699177"
+	},
+	"item": [
+		{
+			"name": "authregister",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"flice\",\r\n    \"email\": \"flice@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authlogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alice@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userprofile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2Nzk2MCwianRpIjoiZWIzMThlMmQtYjVjNi00ZDY0LWIzNjAtNmU0NWY4ZjE3OWNkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDM2Njc5NjAsImNzcmYiOiI0ZTU3YjA5OS1lZWM5LTQ4YzEtYjdmOC1hYjAxODBkMDZiODEiLCJleHAiOjE3NDM2Njg4NjB9.6x590KUYVCzNVr-qWRfgMX_iE9nt74UZ2qSdvbpf90w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alice@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateuserprofile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2Nzk2MCwianRpIjoiZWIzMThlMmQtYjVjNi00ZDY0LWIzNjAtNmU0NWY4ZjE3OWNkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDM2Njc5NjAsImNzcmYiOiI0ZTU3YjA5OS1lZWM5LTQ4YzEtYjdmOC1hYjAxODBkMDZiODEiLCJleHAiOjE3NDM2Njg4NjB9.6x590KUYVCzNVr-qWRfgMX_iE9nt74UZ2qSdvbpf90w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alice Wonderland\",\r\n    \"bio\": \"Curiouser and curiouser!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listusers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2Nzk2MCwianRpIjoiZWIzMThlMmQtYjVjNi00ZDY0LWIzNjAtNmU0NWY4ZjE3OWNkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDM2Njc5NjAsImNzcmYiOiI0ZTU3YjA5OS1lZWM5LTQ4YzEtYjdmOC1hYjAxODBkMDZiODEiLCJleHAiOjE3NDM2Njg4NjB9.6x590KUYVCzNVr-qWRfgMX_iE9nt74UZ2qSdvbpf90w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "suggestions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY4NDI3OSwianRpIjoiZTJiNzFlNGItODdiMi00YzViLTkwNTgtODc2ZDFkZDA3ZjQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEwIiwibmJmIjoxNzQzNjg0Mjc5LCJjc3JmIjoiYWIwOWU0MzQtNDc0NS00MGIyLThiYTEtZmI1MzE5YThhZGRjIiwiZXhwIjoxNzQzNjg1MTc5fQ.TW2YEAoblAxA233zBzMH0oPK7C5nH07-g7kayYroiRI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/suggestions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"suggestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friendrequest",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY4NDI3OSwianRpIjoiZTJiNzFlNGItODdiMi00YzViLTkwNTgtODc2ZDFkZDA3ZjQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEwIiwibmJmIjoxNzQzNjg0Mjc5LCJjc3JmIjoiYWIwOWU0MzQtNDc0NS00MGIyLThiYTEtZmI1MzE5YThhZGRjIiwiZXhwIjoxNzQzNjg1MTc5fQ.TW2YEAoblAxA233zBzMH0oPK7C5nH07-g7kayYroiRI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/friend-requests/send/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"friend-requests",
+						"send",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"blice@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend request incoming",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2ODg1OCwianRpIjoiOTU5N2MwYmEtYjBmYy00MzNmLWJhMTUtODE3OTRkZWRlMTVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NDM2Njg4NTgsImNzcmYiOiJmOTE3NzhjZC0yZGI0LTRkODYtOGI1Yi05YTJiZjNkMDBjYTAiLCJleHAiOjE3NDM2Njk3NTh9.dBNDn2ohMW9J2B_eV-E_TKCtQFlkwoJ66hrzpcLrBZA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/friend-requests/incoming",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"friend-requests",
+						"incoming"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend request accept",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2ODg1OCwianRpIjoiOTU5N2MwYmEtYjBmYy00MzNmLWJhMTUtODE3OTRkZWRlMTVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NDM2Njg4NTgsImNzcmYiOiJmOTE3NzhjZC0yZGI0LTRkODYtOGI1Yi05YTJiZjNkMDBjYTAiLCJleHAiOjE3NDM2Njk3NTh9.dBNDn2ohMW9J2B_eV-E_TKCtQFlkwoJ66hrzpcLrBZA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/friend-requests/1/accept",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"friend-requests",
+						"1",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listfriends",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2OTY2MSwianRpIjoiNmJlMGNiNmEtMDkyYy00Yjg0LTk4YTYtZDdlYWMxNTYzNGRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NDM2Njk2NjEsImNzcmYiOiI5ZWJkNzNhZi1hZTVhLTQ0YzUtODVjMi0wYTBhMWU2YjE4NGQiLCJleHAiOjE3NDM2NzA1NjF9.eTpCm04hGnNUk8b6C-ikuMN6lRBM8snqlfb8l9VqWDQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/friend-requests/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"friend-requests",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "suggestions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2ODg1OCwianRpIjoiOTU5N2MwYmEtYjBmYy00MzNmLWJhMTUtODE3OTRkZWRlMTVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NDM2Njg4NTgsImNzcmYiOiJmOTE3NzhjZC0yZGI0LTRkODYtOGI1Yi05YTJiZjNkMDBjYTAiLCJleHAiOjE3NDM2Njk3NTh9.dBNDn2ohMW9J2B_eV-E_TKCtQFlkwoJ66hrzpcLrBZA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/suggestions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"suggestions"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reject friendrequest",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY2OTU1MywianRpIjoiZDU3MDc5M2EtZjUzYS00NzljLWI0NmUtMTUxZWEwZTYwNDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjMiLCJuYmYiOjE3NDM2Njk1NTMsImNzcmYiOiJlZWFkYmFlNC00ZDlmLTRiZDctYTNiMS03ODNjNjA1YzA2NWUiLCJleHAiOjE3NDM2NzA0NTN9.KFjP1YnZQaZyP56bW1cUT-MmvACGGKnYaOWyec0xMQk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/friend-requests/2/reject",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"friend-requests",
+						"2",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserbyname",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MzY4NjczMiwianRpIjoiYzY2Y2UwMTMtNjI4NS00N2U0LWI3MjAtYTI5ZDU5NzUwNjljIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEwIiwibmJmIjoxNzQzNjg2NzMyLCJjc3JmIjoiZDQ5NmMwMDktNDE2OC00YzhlLTgwY2ItYmY1MzY0NDU5ZTEwIiwiZXhwIjoxNzQzNjg3NjMyfQ.g5PMj1jmpPx3eposufZBttSEYdnyd5LlKBEsNdXpJ7E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/?search=siva",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "siva"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
