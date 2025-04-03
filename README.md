@@ -87,7 +87,7 @@ This project implements a basic social backend API using Flask, Flask-SQLAlchemy
         # Format: mysql+pymysql://username:password@host:port/database_name
         # REMEMBER: If your password contains special characters like '@', ':', '/', etc.,
         # they MUST be percent-encoded (e.g., '@' becomes '%40', '&' becomes '%26').
-        DATABASE_URI="mysql+pymysql://root:YOUR_PASSWORD%40@localhost:3306/social_api_db" # <- SET YOUR DB NAME
+        DATABASE_URI="mysql+pymysql://root:YOUR_PASSWOR@localhost:3306/social_api_db" # <- SET YOUR DB NAME
 
         # --- IMPORTANT: Set strong secret keys ---
         # Generate a strong JWT secret key (e.g., run in python: import secrets; print(secrets.token_hex(32)))
@@ -200,3 +200,13 @@ This project implements a basic social backend API using Flask, Flask-SQLAlchemy
 *   **Postman:** A Postman collection file (`Social_API.postman_collection.json`) is included in the root of this repository. You can import this file into your Postman application (File -> Import) to get pre-configured requests for all endpoints. Remember to run the "Login" request first to automatically capture the JWT token for authenticated requests.
 
 ---
+-----------------------------------------------clone--------------------------------------------------------------
+## After cloning 
+1.create venv and activate
+2.pip install -r requirements.txt
+3.copy the .env.example file to .env (main)
+3.1 change the root password and the database name in .env file after copying it from .env.example
+4. flask db upgrade
+5. you are ready to run -> python run.py
+
+
